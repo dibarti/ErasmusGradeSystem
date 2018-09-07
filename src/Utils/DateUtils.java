@@ -5,19 +5,21 @@ import java.text.SimpleDateFormat;
 
 public class DateUtils {
 
-    private static final String DANISH_DATE_FORMAT = "ddMMyyyy";
+    private static final String DANISH_DATE_FORMAT = "yyyyMMdd";
 
-    private static boolean isDateValid(String inputDate) {
+    public static boolean isDateValid(String inputDate) {
         if (inputDate == null) {
             return false;
         }
 
         SimpleDateFormat sdf = new SimpleDateFormat(DANISH_DATE_FORMAT);
+        sdf.setLenient(false);
 
         try {
             return sdf.parse(inputDate) != null;
         } catch (ParseException e) {
-            // Write Error to output
+            //TODO: Write Error to output
+            System.out.println("error = " + e.getMessage());
             return false;
         }
     }
