@@ -7,7 +7,7 @@ public class DateUtils {
 
     private static final String DANISH_DATE_FORMAT = "yyyyMMdd";
 
-    public static boolean isDateValid(String inputDate) {
+    public static boolean isDateValid(String inputDate) throws ParseException {
         if (inputDate == null) {
             return false;
         }
@@ -15,13 +15,7 @@ public class DateUtils {
         SimpleDateFormat sdf = new SimpleDateFormat(DANISH_DATE_FORMAT);
         sdf.setLenient(false);
 
-        try {
-            return sdf.parse(inputDate) != null;
-        } catch (ParseException e) {
-            //TODO: Write Error to output
-            System.out.println("error = " + e.getMessage());
-            return false;
-        }
+        return sdf.parse(inputDate) != null;
     }
 
 }

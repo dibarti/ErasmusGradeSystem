@@ -5,16 +5,9 @@ public class ConvertGrade {
     private static final int[] DANISH_GRADE = {12, 10, 7, 4, 2, 0, -3};
     private static final String[] ECTS_GRADE = {"A", "B", "C", "D", "E", "Fx", "F"};
 
-    public static String convertGrade(String input) {
+    public static String convertGrade(String input) throws NotADanishGradeException {
         int number = isNumber(input);
-
-        try {
-            return isDanishGrade(number);
-        } catch (NotADanishGradeException e) {
-            //TODO: Write error to line
-
-        }
-        return null;
+        return isDanishGrade(number);
     }
 
     private static int isNumber(String input) throws NumberFormatException, NullPointerException {
@@ -28,10 +21,10 @@ public class ConvertGrade {
                 return ECTS_GRADE[i];
             }
         }
-        throw new NotADanishGradeException();
+        throw new NotADanishGradeException("Number: " + number + " is not a Danish grade");
     }
 
     public static class NotADanishGradeException extends Exception {
-        public NotADanishGradeException() { super(); }
+        NotADanishGradeException(String message) { super(message); }
     }
 }
