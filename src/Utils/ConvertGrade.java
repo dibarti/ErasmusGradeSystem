@@ -15,7 +15,6 @@ public class ConvertGrade {
     }
 
     private static String isDanishGrade(int number) throws NotADanishGradeException {
-
         for (int i = 0; i < DANISH_GRADE.length; i++) {
             if (DANISH_GRADE[i] == number) {
                 return ECTS_GRADE[i];

@@ -1,0 +1,5 @@
+Date     | Grade | Error
+20180907 |   B   | 
+         |   A   | Unparseable date: "20183027"
+         |       | Unparseable date: "20180500" & Number: 8 is not a Danish grade
+         |       | Unparseable date: "20180500" & Number: 5 is not a Danish grade

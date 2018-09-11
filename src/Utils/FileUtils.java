@@ -1,8 +1,11 @@
 package Utils;
 
+import Models.Line;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileUtils {
 
@@ -17,6 +20,8 @@ public class FileUtils {
     private static final int GRADE_START_INDEX = 87;
     private static final int GRADE_LENGTH = 2;
 
+    private static List<Line> lines = new ArrayList<>();
+
     public static BufferedReader openFile() {
         InputStream ins;
         Reader r = null;
@@ -24,59 +29,36 @@ public class FileUtils {
             ins = new FileInputStream(INPUT);
             r = new InputStreamReader(ins, StandardCharsets.UTF_8);
         } catch (FileNotFoundException e) {
-            // writeError(e.getLocalizedMessage());
             e.printStackTrace();
         }
         return new BufferedReader(r);
     }
 
-    public static void readLines(BufferedReader br) throws IOException {
+    public static List<Line> readLines(BufferedReader br) throws IOException {
         String line;
-        int currentLine = 0;
         while ((line = br.readLine()) != null) {
-            processLine(line, currentLine);
-            currentLine++;
-        }
-    }
-
-    private static void processLine(String line, int lineNumber) {
-        boolean isValidDate = validateDate(line, lineNumber);
-        String newGrade = validateGrade(line, lineNumber);
-    }
-
-    private static String validateGrade(String line, int lineNumber) {
-        try {
-            String grade = readString(line, GRADE_START_INDEX, GRADE_LENGTH);
-            return ConvertGrade.convertGrade(grade);
-        } catch (ConvertGrade.NotADanishGradeException e) {
-            writeError(lineNumber, line, e.getMessage());
-            return null;
-        }
-    }
-
-    private static boolean validateDate(String line, int lineNumber) {
-        try {
             String date = readString(line, DATE_START_INDEX, DATE_LENGTH);
-            return DateUtils.isDateValid(date);
-        } catch (ParseException e) {
-            writeError(lineNumber, line, e.getMessage());
-            return false;
+            String grade = readString(line, GRADE_START_INDEX, GRADE_LENGTH);
+            lines.add(new Line(date, grade));
+        }
+        return lines;
+    }
+
+    public static void writeLines(List<Line> lines) {
+        try (PrintWriter pw = new PrintWriter(OUTPUT)) {
+            pw.println("DATE     | GRADE | ERROR");
+            for (Line line : lines) {
+                pw.println(line.toString());
+            }
+            System.out.println("Write to file complete!");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
     private static String readString(String currentLine, int position, int length) {
         int endPosition = position + length;
         return currentLine.substring(position, endPosition);
-    }
-
-    private static void writeLine(int lineNumber, String line, String message) {
-        // TODO: Write to output file?
-        System.out.println("Write " + line + " " + message + " at Line: " + lineNumber);
-
-    }
-
-    public static void writeError(int lineNumber, String line, String error) {
-        writeLine(lineNumber, line, "ERROR - " + error);
     }
 
 }
