@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da86c5e8-68a3-4b7b-857b-ac884795c791" name="Default Changelist" comment="" />
+    <list default="true" id="da86c5e8-68a3-4b7b-857b-ac884795c791" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/ConvertGrade.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/main/java/Files/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/main/java/Files/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/main/java/Models/Line.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/main/java/Utils/ConvertGrade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/main/java/Utils/DateUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/main/java/Utils/FileUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/test/java/Utils/ConvertGradeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/src/test/java/Utils/DateUtilsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/target/classes/Files/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConvertGrade/target/classes/Files/output.txt" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/ConvertDanishGradeToECTS/target/" />
     <ignored path="$PROJECT_DIR$/GradeConversion/target/" />
     <ignored path="$PROJECT_DIR$/src/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,12 +157,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="ConvertGrade" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -361,17 +371,11 @@
       <workItem from="1538046572016" duration="1814000" />
       <workItem from="1538487697521" duration="1250000" />
       <workItem from="1538636383558" duration="1880000" />
-      <workItem from="1538640552105" duration="4271000" />
+      <workItem from="1538640552105" duration="4612000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConvertGradeTest - 2018.09.27 at 13h 30m 51s.xml">
-      <configuration name="ConvertGradeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DateUtilsTest - 2018.09.27 at 13h 39m 42s.xml">
-      <configuration name="DateUtilsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_ConvertGrade - 2018.10.02 at 15h 43m 13s.xml">
       <configuration name="All in ConvertGrade" configurationId="JUnit" />
     </history-entry>
@@ -396,9 +400,15 @@
     <history-entry file="ConvertGradeTest - 2018.10.04 at 10h 56m 29s.xml">
       <configuration name="ConvertGradeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ConvertGradeTest - 2018.10.04 at 11h 25m 30s.xml">
+      <configuration name="ConvertGradeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConvertGradeTest - 2018.10.04 at 11h 26m 43s.xml">
+      <configuration name="ConvertGradeTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25253000" />
+    <option name="totallyTimeSpent" value="25594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="794" extended-state="0" />
@@ -410,7 +420,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968536" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33760685" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33760685" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39889196" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -419,7 +429,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32905984" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -447,14 +457,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/lang/Exception.java" />
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/Files/input.txt">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/main/java/Files/input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="89" selection-start-line="3" selection-start-column="89" selection-end-line="3" selection-end-column="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/Files/output.txt">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/main/java/Files/output.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -488,14 +498,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pom.xml">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/Models/Line.java">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/main/java/Models/Line.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
@@ -505,14 +515,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/Utils/ConvertGrade.java">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/main/java/Utils/ConvertGrade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
@@ -522,7 +532,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/Utils/FileUtils.java">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/main/java/Utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-296">
           <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
@@ -532,7 +542,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/main/java/Utils/DateUtils.java">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/main/java/Utils/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -542,7 +552,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/test/java/Utils/ConvertGradeTest.java">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/test/java/Utils/ConvertGradeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-56">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
@@ -552,7 +562,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/test/java/Utils/DateUtilsTest.java">
+    <entry file="file://$PROJECT_DIR$/ConvertGrade/src/test/java/Utils/DateUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
