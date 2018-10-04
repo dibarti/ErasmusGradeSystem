@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ConvertDanishGradeToECTS" />
+        <module name="ConvertGrade" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ConvertDanishGradeToECTS" target="1.5" />
+      <module name="ConvertGrade" target="7" />
+      <module name="GradeConversion" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

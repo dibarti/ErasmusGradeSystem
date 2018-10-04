@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ConvertDanishGradeToECTS/ConvertDanishGradeToECTS.iml" filepath="$PROJECT_DIR$/ConvertDanishGradeToECTS/ConvertDanishGradeToECTS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/ConvertGrade.iml" filepath="$PROJECT_DIR$/.idea/ConvertGrade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConvertGrade/ConvertGrade.iml" filepath="$PROJECT_DIR$/ConvertGrade/ConvertGrade.iml" />
     </modules>
   </component>
 </project>
