@@ -1,51 +1,37 @@
-<project name="AntJavaProject" default="main" basedir=".">
-	<description>
-		Create a Java Project (JAR) with Ant build script
-	</description>
+<project name="junit-example">
+  <property name="main.build.dir" value="build/main"/>
+  <property name="main.src.dir" value="src/main"/>
+  <property name="test.build.dir" value="build/test"/>
+  <property name="test.src.dir" value="src/test"/>
 
-	<property name="projectName" value="ConvertDanishGradeToECTS" />
-	
-	<!-- Java sources -->
-	<property name="src.dir" location="src" />
-	
-	<!-- Java classes -->
-	<property name="build.dir" location="bin" />
-	
-	<!-- Output, Jar -->
-	<property name="dist.dir" location="dist" />
+  <path id="classpath.test">
+    <pathelement location="lib/junit-4.12.jar"/>
+    <pathelement location="lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${main.build.dir}"/>
+  </path>
 
-	<target name="init">
-		<!-- Create the time stamp -->
-		<tstamp />
-		<!-- Create the build directory structure used by compile -->
-		<mkdir dir="${build.dir}" />
-	</target>
+  <target name="compile">
+    <mkdir dir="${main.build.dir}"/>
+    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false"/>
+  </target>
 
-	<target name="compile" depends="init" description="compile the source ">
-		<!-- Compile the java code from ${src.dir} into ${build.dir} -->
-		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}" />
-	</target>
+  <target name="test-compile" depends="compile">
+    <mkdir dir="${test.build.dir}"/>
+    <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
+        <classpath refid="classpath.test"/>
+    </javac>
+  </target>
 
-	<target name="dist" depends="compile" description="package, output to JAR">
-
-		<!-- Create the distribution directory -->
-		<mkdir dir="${dist.dir}" />
-
-		<!-- Put everything in ${build} into the {$projectName}-${DSTAMP}.jar file -->
-		<jar jarfile="${dist.dir}/${projectName}-${DSTAMP}.jar" basedir="${build.dir}" >
-		    <manifest>
-			<!-- create an executable Jar -->
-			<attribute name="Main-Class" value="src.Main.Main" />
-		    </manifest>
-		</jar>
-	</target>
-
-	<target name="clean" description="clean up">
-		<delete dir="${build.dir}" />
-		<delete dir="${dist.dir}" />
-	</target>
-	
-	<!-- Default, run this -->
-	<target name="main" depends="clean, compile, dist" />
-	
+  <target name="test" depends="test-compile">
+    <junit printsummary="on" haltonfailure="yes" fork="true">
+        <classpath>
+          <path refid="classpath.test"/>
+          <pathelement location="${test.build.dir}"/>
+        </classpath>
+        <formatter type="brief" usefile="false" />
+        <batchtest>
+            <fileset dir="${test.src.dir}" includes="**/*Test.java" />
+        </batchtest>
+    </junit>
+  </target>
 </project>
