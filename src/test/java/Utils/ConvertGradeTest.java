@@ -13,7 +13,7 @@ public class ConvertGradeTest {
         try {
             ectsGrade = ConvertGrade.convertGrade(input);
         } catch (ConvertGrade.NotADanishGradeException e) {
-            e.printStackTrace();
+            assertNull("Exception should not be thrown", e);
         }
         assertEquals("Conversion not right", "A", ectsGrade);
     }

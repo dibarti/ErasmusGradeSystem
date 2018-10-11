@@ -14,7 +14,17 @@ public class DateUtilsTest {
         try {
             assertTrue(DateUtils.isDateValid(validDate));
         } catch (ParseException e) {
-            e.printStackTrace();
+            assertNull("Exception should not be thrown", e);
+        }
+    }
+
+    @Test
+    public void isInvalidDateValid() {
+        String validDate = "20183008";
+        try {
+            assertFalse(DateUtils.isDateValid(validDate));
+        } catch (ParseException e) {
+            assertNotNull("Exception should be thrown", e);
         }
     }
 }
