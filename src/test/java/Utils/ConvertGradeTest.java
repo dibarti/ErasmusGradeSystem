@@ -31,4 +31,32 @@ public class ConvertGradeTest {
         }
     }
 
+    @Test
+    public void examEctsGradePassed() {
+        String ectsGrade = "E";
+        boolean passed = ConvertGrade.examPassed(ectsGrade);
+        assertTrue(String.format("ECTS grade: %s should pass the exam", ectsGrade), passed);
+    }
+
+    @Test
+    public void examEctsGradeFailed() {
+        String ectsGrade = "F";
+        boolean failed = ConvertGrade.examPassed(ectsGrade);
+        assertFalse(String.format("ECTS grade: %s should fail the exam", ectsGrade), failed);
+    }
+
+    @Test
+    public void examDanishGradePassed() {
+        int danishGrade = 2;
+        boolean passed = ConvertGrade.examPassed(danishGrade);
+        assertTrue(String.format("Danish grade: %d should pass the exam", danishGrade), passed);
+    }
+
+    @Test
+    public void examDanishGradeFailed() {
+        int danishGrade = 0;
+        boolean failed = ConvertGrade.examPassed(danishGrade);
+        assertFalse(String.format("Danish grade: %d should fail the exam", danishGrade), failed);
+    }
+
 }
