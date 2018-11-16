@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FileUtils {
 
-    private static final String FILES_LOCATION = "src/Main.Files/";
+    private static final String FILES_LOCATION = "src/main/java/Files/";
     private static final String INPUT_FILE_NAME = "input.txt";
     private static final String INPUT = FILES_LOCATION + INPUT_FILE_NAME;
     private static final String OUTPUT_FILE_NAME = "output.txt";

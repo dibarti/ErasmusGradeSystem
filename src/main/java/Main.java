@@ -7,9 +7,12 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        transform();
+    }
+
+    public static void transform() throws IOException{
         BufferedReader br = FileUtils.openFile();
         List<Line> lines = FileUtils.readLines(br);
         FileUtils.writeLines(lines);
     }
-
 }
