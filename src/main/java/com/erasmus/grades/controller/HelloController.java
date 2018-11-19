@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String showIndex() {
-        System.out.println("index");
-		return "index";
-	}
+//	@RequestMapping(value = "/", method = RequestMethod.GET)
+//	public String showIndex() {
+//        System.out.println("index");
+//		return "index";
+//	}
 
 
 }

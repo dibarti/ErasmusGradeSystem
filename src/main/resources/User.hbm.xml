@@ -4,7 +4,7 @@
 <!-- Generated Jul 11, 2016 10:24:48 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="com.erasmus.grades.model.User" table="User">
-        <id name="userId" type="java.lang.Long">
+        <id name="iduser" type="java.lang.Long">
             <column name="iduser"/>
             <generator class="assigned"/>
         </id>

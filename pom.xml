@@ -41,26 +41,9 @@
         <postgres.jdb.driver.version>9.3-1100-jdbc4</postgres.jdb.driver.version>
     </properties>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>it.eng.tz.spring.stackoverflow.sample</groupId>
-    <artifactId>SpringStack</artifactId>
+    <groupId>com.erasmus.grades</groupId>
+    <artifactId>Erasmus</artifactId>
     <version>1.0</version>
-    <name>Gestione Candidati</name>
-    <inceptionYear>08/02/2017</inceptionYear>
-    <organization>
-        <name>Engineering Ingegneria Informatica</name>
-        <url>www.eng.it</url>
-    </organization>
-    <developers>
-        <developer>
-            <name>Angelo Immediata</name>
-            <organization>Engineering Ingegneria Informatica</organization>
-            <url>www.eng.it</url>
-            <email>angelo.immediata@eng.it</email>
-            <roles>
-                <role>Solution Architect</role>
-            </roles>
-        </developer>
-    </developers>
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
@@ -192,14 +175,6 @@
             <version>${tiles.extras.version}</version>
             <exclusions>
                 <exclusion>
-                    <groupId>javax.servlet.jsp</groupId>
-                    <artifactId>jsp-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-                <exclusion>
                     <groupId>junit</groupId>
                     <artifactId>junit</artifactId>
                 </exclusion>
@@ -227,6 +202,10 @@
                     <groupId>org.apache.tiles</groupId>
                     <artifactId>tiles-ognl</artifactId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <!-- Dipendenza da ehcache -->
@@ -247,29 +226,29 @@
             <version>${ehcache.web.version}</version>
             <exclusions>
                 <exclusion>
-                    <artifactId>javax.servlet-api</artifactId>
-                    <groupId>javax.servlet</groupId>
-                </exclusion>
-                <exclusion>
                     <artifactId>ehcache-core</artifactId>
                     <groupId>net.sf.ehcache</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- Fine dipendenza da ehcache -->
-        <!--Dipendenza da Jetty server -->
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>2.2</version>
-            <scope>provided</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet.jsp.jstl</groupId>-->
+            <!--<artifactId>jstl-api</artifactId>-->
+            <!--<version>1.2</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet.jsp</groupId>-->
+            <!--<artifactId>jsp-api</artifactId>-->
+            <!--<version>2.2</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
@@ -1133,13 +1112,5 @@
             </plugin>
         </plugins>
     </reporting>
-    <description>Progetto per la gestione dei CV dei candidati</description>
-    <repositories>
-        <repository>
-            <id>Geomajas repos</id>
-            <name>Repository geomas per artefatto crosby osmpbf</name>
-            <url>http://apps.geomajas.org/nexus/content/groups/public</url>
-        </repository>
-    </repositories>
     <packaging>war</packaging>
 </project>

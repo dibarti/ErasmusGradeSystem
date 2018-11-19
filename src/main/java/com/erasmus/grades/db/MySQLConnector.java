@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class MySQLConnector {
     public static Connection getConnection(MySQLConnectionModel connModel) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(connModel.getConnString(), connModel.getUsername(), connModel.getPassword());
     }
     public static void closeResources(AutoCloseable closeable)
