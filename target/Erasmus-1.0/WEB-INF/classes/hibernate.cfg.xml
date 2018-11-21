@@ -20,7 +20,10 @@
             org.hibernate.context.internal.ThreadLocalSessionContext
         </property>
 
-        <!-- Mapping With Model Class Containing Annotations -->
+        <!-- Mapping With Model Course Containing Annotations -->
         <mapping class="com.erasmus.grades.model.User"/>
+        <mapping class="com.erasmus.grades.model.Course"/>
+        <mapping class="com.erasmus.grades.model.UserToCourse"/>
+        <mapping class="com.erasmus.grades.model.UserToCourseId"/>
     </session-factory>
 </hibernate-configuration>

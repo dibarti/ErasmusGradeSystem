@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 11, 2016 10:24:48 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.erasmus.grades.model.Course" table="Course">
+        <id name="courseId" type="java.lang.Long">
+            <column name="courseId"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="username"/>
+        </property>
+        <property name="ects" type="java.lang.Integer">
+            <column name="ects"/>
+        </property>
+    </class>
+</hibernate-mapping>
+

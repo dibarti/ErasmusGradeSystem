@@ -1,6 +1,9 @@
 package com.erasmus.grades.service;
 
+import com.erasmus.grades.model.Course;
 import com.erasmus.grades.model.User;
+import com.erasmus.grades.model.UserToCourse;
+import com.erasmus.grades.model.UserToCourseId;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
@@ -12,7 +15,7 @@ public class HibernateService {
 
     static SessionFactory sessionFactoryObj;
 
-    protected static SessionFactory buildSessionFactory() {
+    public static SessionFactory buildSessionFactory() {
         // Creating Configuration Instance & Passing Hibernate Configuration File
 //        Configuration configObj = new Configuration();
 //        configObj.configure("/hibernate.cfg.xml");
@@ -31,7 +34,10 @@ public class HibernateService {
 
         Metadata metadata = new MetadataSources(standardRegistry)
                 .addAnnotatedClass(User.class)
-                .addResource("/User.hbm.xml")
+                .addAnnotatedClass(UserToCourse.class)
+                .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(UserToCourseId.class)
+//                .addResource("/User.hbm.xml")
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();

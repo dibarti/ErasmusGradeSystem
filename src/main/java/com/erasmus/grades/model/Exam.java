@@ -5,6 +5,6 @@ import java.util.Date;
 public class Exam {
 
     private Date date;
-    private Class aClass;
+    private Course aCourse;
 
 }

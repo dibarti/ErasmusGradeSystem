@@ -1,7 +1,11 @@
 package com.erasmus.grades.controller;
 
 import com.erasmus.grades.model.User;
+import com.erasmus.grades.service.HibernateService;
 import com.erasmus.grades.service.LoginService;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,15 +20,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class LoginController {
-
-    @RequestMapping(value = "/student", method = RequestMethod.GET)
-    public String homePage(ModelMap model) {
-        model.addAttribute("user", getPrincipal());
-        return "student";
-    }
 
     @RequestMapping(value = "/teacher", method = RequestMethod.GET)
     public String adminPage(ModelMap model) {
@@ -47,6 +47,7 @@ public class LoginController {
     @RequestMapping(value = {"/", "/login"}, method = {RequestMethod.GET, RequestMethod.POST})
     public String loginPage(ModelMap model) {
         model.addAttribute("userForm", new User());
+
         return "login";
     }
 

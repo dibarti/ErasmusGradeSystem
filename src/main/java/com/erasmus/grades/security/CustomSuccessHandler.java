@@ -34,7 +34,6 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
     }
 
     protected String determineTargetUrl(Authentication authentication) {
-        System.out.println("determineTargetUrl");
         String url = "";
 
         Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
