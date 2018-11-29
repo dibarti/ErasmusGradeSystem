@@ -6,17 +6,29 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class StudentGrade implements Serializable {
-    private Course course;
+//    private Course course;
+    private String course;
     private Date date;
     private String grade;
 
-    public StudentGrade(Course course, Date date, String grade) {
+//    public StudentGrade(Course course, Date date, String grade) {
+//        this.course = course;
+//        this.date = date;
+//        this.grade = grade;
+//    }
+//
+//    public Course getCourse() {
+//        return course;
+//    }
+
+
+    public StudentGrade(String course, String grade) {
         this.course = course;
-        this.date = date;
+        this.date = new Date();
         this.grade = grade;
     }
 
-    public Course getCourse() {
+    public String getCourse() {
         return course;
     }
 

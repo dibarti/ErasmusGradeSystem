@@ -19,16 +19,8 @@ public class Line {
     }
 
     private String getGrade() {
-        try {
-            return ConvertGrade.convertGrade(danishGrade);
-        } catch (ConvertGrade.NotADanishGradeException e) {
-            if (error == null) {
-                error = e.getMessage();
-            } else {
-                error += " & " + e.getMessage();
-            }
-            return "";
-        }
+        return ConvertGrade.convertGrade(danishGrade);
+
     }
 
     private String getDate() {

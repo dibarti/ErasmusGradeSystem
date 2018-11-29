@@ -82,7 +82,7 @@
         <c:forEach items="${grades}" var="grade" varStatus="counter">
             <tr>
                 <th scope="row">${counter.count}</th>
-                <td>${grade.course.name}</td>
+                <td>${grade.course}</td>
                 <td align="center">${grade.date}</td>
                 <td align="center">${grade.grade}</td>
             </tr>

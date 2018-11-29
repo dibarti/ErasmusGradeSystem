@@ -56,18 +56,16 @@
             <a href="#" class="nav-item active nav-link">${user}</a>
         </ul>
 
-        <div class="navnar-nav">
-            <form id="gradeButton" action="/student">
-                <label for="status" style="margin-right: 10px; color: white;"><span>Format</span></label>
-                <div class="btn-group" id="status" data-toggle="buttons">
-                    <label class="btn btn-default btn-on btn-xs <c:if test = "${format == 'danish'}"><c:out value = "active"/></c:if>">
-                        <input type="radio" value="danish" name="format" checked="checked"
-                               onchange="submitForm()">DANISH</label>
-                    <label class="btn btn-default btn-off btn-xs <c:if test = "${format == 'ects'}"><c:out value = "active"/></c:if>">
-                        <input type="radio" value="ects" name="format" onchange="submitForm()">ECTS</label>
-                </div>
-            </form>
-        </div>
+        <form id="gradeButton" action="/student">
+            <label for="status" style="margin-right: 10px; color: white;"><span>Format</span></label>
+            <div class="btn-group" id="status" data-toggle="buttons">
+                <label class="btn btn-default btn-on btn-xs <c:if test = "${format == 'danish'}"><c:out value = "active"/></c:if>">
+                    <input type="radio" value="danish" name="format" checked="checked"
+                           onchange="submitForm()">DANISH</label>
+                <label class="btn btn-default btn-off btn-xs <c:if test = "${format == 'ects'}"><c:out value = "active"/></c:if>">
+                    <input type="radio" value="ects" name="format" onchange="submitForm()">ECTS</label>
+            </div>
+        </form>
     </div>
 </nav>
 <div class="container">
@@ -84,7 +82,7 @@
         <c:forEach items="${grades}" var="grade" varStatus="counter">
             <tr>
                 <th scope="row">${counter.count}</th>
-                <td>${grade.course.name}</td>
+                <td>${grade.course}</td>
                 <td align="center">${grade.date}</td>
                 <td align="center">${grade.grade}</td>
             </tr>

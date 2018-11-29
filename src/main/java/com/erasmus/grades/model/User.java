@@ -11,7 +11,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "iduser", unique = true, nullable = false)
     private long iduser;
     @Column(name = "username", unique = true, nullable = false)
@@ -21,14 +21,8 @@ public class User implements Serializable {
     @Column(name = "role", nullable = false)
     private int role;
 
-    //    @OneToMany(
-//            mappedBy = "user",
-//            cascade = CascadeType.ALL,
-//            orphanRemoval = true
-//    )
-//    private List<UserToCourse> courses = new ArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.user")
-    private Set<UserToCourse> userToCourses;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.user", cascade=CascadeType.ALL)
+    private Set<UserToCourse> userToCourses = new HashSet<>(0);
 
     public long getUserId() {
         return iduser;

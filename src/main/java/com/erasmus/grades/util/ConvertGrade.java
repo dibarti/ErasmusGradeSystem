@@ -7,7 +7,7 @@ public class ConvertGrade {
     private static final int[] DANISH_GRADE = {12, 10, 7, 4, 2, 0, -3};
     private static final String[] ECTS_GRADE = {"A", "B", "C", "D", "E", "Fx", "F"};
 
-    public static String convertGrade(String input) throws NotADanishGradeException {
+    public static String convertGrade(String input) {
         int number = isNumber(input);
         return getEctsGrade(number);
     }
@@ -16,32 +16,31 @@ public class ConvertGrade {
         return Integer.parseInt(input);
     }
 
-    private static String getEctsGrade(int number) throws NotADanishGradeException {
+    private static String getEctsGrade(int number) {
         for (int i = 0; i < DANISH_GRADE.length; i++) {
             if (DANISH_GRADE[i] == number) {
                 return ECTS_GRADE[i];
             }
         }
-        throw new NotADanishGradeException("Number: " + number + " is not a Danish grade");
+        System.out.println("Number: " + number + " is not a Danish grade");
+        return null;
     }
 
     public static class NotADanishGradeException extends Exception {
-        NotADanishGradeException(String message) { super(message); }
+        NotADanishGradeException(String message) {
+            super(message);
+        }
     }
 
     public static boolean examPassed(int danishGrade) {
-        try {
-            getEctsGrade(danishGrade);
-            // Only the grades 12, 10, 7, 4, 2 should pass the exam
-            int passedGradesLength = 5;
-            int[] passedArray = Arrays.copyOf(DANISH_GRADE, passedGradesLength);
-            for (int grade : passedArray) {
-                if (grade == danishGrade) {
-                    return true;
-                }
+        getEctsGrade(danishGrade);
+        // Only the grades 12, 10, 7, 4, 2 should pass the exam
+        int passedGradesLength = 5;
+        int[] passedArray = Arrays.copyOf(DANISH_GRADE, passedGradesLength);
+        for (int grade : passedArray) {
+            if (grade == danishGrade) {
+                return true;
             }
-        } catch (NotADanishGradeException e) {
-            e.printStackTrace();
         }
         return false;
     }

@@ -1,8 +1,11 @@
 package com.erasmus.grades.controller;
 
 import com.erasmus.grades.model.Course;
+import com.erasmus.grades.model.SecurityUser;
 import com.erasmus.grades.model.StudentGrade;
+import com.erasmus.grades.service.StudentService;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -36,60 +39,45 @@ public class StudentController {
         Course databases = new Course("Databases", 10);
         Course ai = new Course("Artificial intelligence", 10);
         Calendar c = Calendar.getInstance();
-        c.add(Calendar.DATE, -1);
         List<StudentGrade> grades = new ArrayList<>();
-        grades.add(new StudentGrade(testing, new Date(), grade1));
-        grades.add(new StudentGrade(databases, c.getTime(), grade2));
-        c.add(Calendar.DATE, -12);
-        grades.add(new StudentGrade(ai, c.getTime(), grade3));
+        grades.add(new StudentGrade("Testing",grade1));
+        grades.add(new StudentGrade("Databases",  grade2));
+        grades.add(new StudentGrade("Artificial intelligence", grade3));
 
         return grades;
     }
 
     @RequestMapping(value = "/student", method = RequestMethod.GET)
     public String index(ModelMap model) {
-        model.addAttribute("user", getPrincipal());
+        model.addAttribute("user", getUser().getUsername());
 
         String format = "danish";
-        List<StudentGrade> grades = getGrades(format);
-        model.addAttribute("grades", grades);
         model.addAttribute("format", format);
+
+        long studentId = getUser().getUserId();
+        List<StudentGrade> grades = StudentService.getInstance().fetchGradesByStudentId(studentId, format);
+        model.addAttribute("grades", grades);
 
         return "student";
     }
 
     @RequestMapping(value = "/student", method = RequestMethod.GET, params = "format")
     public String indexWithFormat(@RequestParam("format") String format, ModelMap model) {
-        model.addAttribute("user", getPrincipal());
+        model.addAttribute("user", getUser().getUsername());
 
-        List<StudentGrade> grades = getGrades(format);
-        model.addAttribute("grades", grades);
         model.addAttribute("format", format);
+
+        long studentId = getUser().getUserId();
+        List<StudentGrade> grades = StudentService.getInstance().fetchGradesByStudentId(studentId, format);
+        model.addAttribute("grades", grades);
 
         return "student";
     }
 
-//    private void fetchGrades() {
-//        SessionFactory sessionFactory = HibernateService.buildSessionFactory();
-//        Session session = sessionFactory.getCurrentSession();
-//        Transaction tx = session.beginTransaction();
-//        String hql = "from UserToCourse utc where utc.pk.user.id = ?";
-//        List result = session.createQuery(hql)
-//                .setParameter(0, 1L)
-//                .list();
-//        System.out.println("result = " + result);
-//    }
-
-    private String getPrincipal() {
-        String userName = null;
+    private SecurityUser getUser() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-        if (principal instanceof UserDetails) {
-            userName = ((UserDetails) principal).getUsername();
-        } else {
-            userName = principal.toString();
-        }
-        return userName;
+        return ((SecurityUser) principal);
     }
 
 }

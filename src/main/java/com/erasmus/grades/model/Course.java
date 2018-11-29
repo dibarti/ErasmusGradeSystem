@@ -12,28 +12,29 @@ import java.util.Set;
 public class Course implements Serializable {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "class_id", unique = true, nullable = false)
     private long courseId;
     @Column(name = "name", nullable = false)
     private String name;
     @Column(name = "ects", nullable = false)
     private int ects;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.course")
+    private Set<UserToCourse> userToCourses = new HashSet<>(0);
+
+    public Course() {
+    }
 
     public Course(String name, int ects) {
         this.name = name;
         this.ects = ects;
     }
 
-    //    @OneToMany(
-//            mappedBy = "course",
-//            cascade = CascadeType.ALL,
-//            orphanRemoval = true
-//    )
-//    private List<UserToCourse> users = new ArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.course")
-    private Set<UserToCourse> userToCourses;
-
-    public Course() {
+    public Course(long courseId, String name, int ects, Set<UserToCourse> userToCourses) {
+        this.courseId = courseId;
+        this.name = name;
+        this.ects = ects;
+        this.userToCourses = userToCourses;
     }
 
 

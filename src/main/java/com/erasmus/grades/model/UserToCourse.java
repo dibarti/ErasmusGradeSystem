@@ -9,17 +9,17 @@ import java.io.Serializable;
         @AssociationOverride(name = "pk.user",
                 joinColumns = @JoinColumn(name = "user_id")),
         @AssociationOverride(name = "pk.course",
-                joinColumns = @JoinColumn(name = "class_id"))})
+                joinColumns = @JoinColumn(name = "class_id"))
+})
 public class UserToCourse implements Serializable {
 
-    @EmbeddedId
-    private UserToCourseId pk;
-    @Column(name = "grade")
+    private UserToCourseId pk = new UserToCourseId();
     private int grade;
 
     public UserToCourse() {
     }
 
+    @EmbeddedId
     public UserToCourseId getPk() {
         return pk;
     }
@@ -88,6 +88,7 @@ public class UserToCourse implements Serializable {
 //        this.course = course;
 //    }
 //
+    @Column(name = "grade")
     public int getGrade() {
         return grade;
     }

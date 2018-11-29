@@ -52,20 +52,23 @@ public class UserToCourseId implements Serializable {
 //        return courseId;
 //    }
 
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
+        if (o == null || getClass() != o.getClass()) return false;
 
         UserToCourseId that = (UserToCourseId) o;
-        return Objects.equals(user, that.user) &&
-                Objects.equals(course, that.course);
+
+        if (user != null ? !user.equals(that.user) : that.user != null) return false;
+        if (course != null ? !course.equals(that.course) : that.course != null)
+            return false;
+
+        return true;
     }
 
-    @Override
     public int hashCode() {
-        return Objects.hash(user, course);
+        int result;
+        result = (user != null ? user.hashCode() : 0);
+        result = 31 * result + (course != null ? course.hashCode() : 0);
+        return result;
     }
 }
