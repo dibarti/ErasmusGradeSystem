@@ -169,5 +169,13 @@ DELIMITER ;
 
 -- Update grade
 
+DELIMITER $$
+DROP PROCEDURE IF EXISTS testingDB.updateGrade $$
+CREATE PROCEDURE testingDB.updateGrade( IN activityID_in INT UNSIGNED, IN userID_in INT UNSIGNED, IN grade_in SMALLINT)
+BEGIN
+		REPLACE INTO activityStudent VALUES(grade_in, userID_in, activityID_in);
+END $$
+DELIMITER ;
+
 
 

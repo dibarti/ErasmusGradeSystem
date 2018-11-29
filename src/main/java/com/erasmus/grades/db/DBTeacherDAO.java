@@ -18,7 +18,7 @@ public class DBTeacherDAO extends MySQLConnector{
 
             getCoursesTaughtStmt = con.prepareCall("CALL testingDB.getCoursesTaught(?)");
             getStudentsCourseStmt = con.prepareCall("CALL testingDB.getStudentsCourse(?)");
-            updateGradeStmt = con.prepareCall("CALL testingDB.updateGrade(?, ?)");
+            updateGradeStmt = con.prepareCall("CALL testingDB.updateGrade(?, ?, ?)");
 
         } catch (SQLException e) {
             System.err.println(e.getMessage());
@@ -49,11 +49,12 @@ public class DBTeacherDAO extends MySQLConnector{
         return resultSet;
     }
 
-    public ResultSet updateGrade(int studentID, int activityID) {
+    public ResultSet updateGrade(int studentID, int activityID, int grade) {
         ResultSet resultSet = null;
         try {
             updateGradeStmt.setInt(1, activityID);
             updateGradeStmt.setInt(2, studentID);
+            updateGradeStmt.setInt(3, grade);
             resultSet = updateGradeStmt.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
