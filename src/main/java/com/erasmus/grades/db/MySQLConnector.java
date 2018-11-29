@@ -5,10 +5,22 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class MySQLConnector {
+
+    Connection con;
+    private final static String url = "jdbc:mysql://";
+
     public static Connection getConnection(MySQLConnectionModel connModel) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(connModel.getConnString(), connModel.getUsername(), connModel.getPassword());
     }
+
+    public void connection(String ip, String usr, String pass, String db, int port) throws SQLException {
+        String aux = url + ip + ":" + port + "/" + db;
+
+        con = DriverManager.getConnection(aux, usr, pass);
+        System.out.println("Establishing connection");
+    }
+
     public static void closeResources(AutoCloseable closeable)
     {
         try{

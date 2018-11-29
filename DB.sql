@@ -32,7 +32,7 @@ DROP TABLE IF EXISTS teacher;
 CREATE TABLE teacher(
 
 ID INT UNSIGNED NOT NULL,
-active BOOLEAN,
+active BOOLEAN DEFAULT 1,
 
 PRIMARY KEY(ID),
 FOREIGN KEY ID REFERENCES user(iduser)
@@ -43,6 +43,7 @@ CREATE TABLE course(
 ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
 courseName VARCHAR(255),
 yearDone INT,
+closed BOOLEAN DEFAULT 0,
 
 PRIMARY KEY(ID)
 );
@@ -72,6 +73,7 @@ CREATE TABLE activity(
 ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
 activityName VARCHAR(255),
 activityType SMALLINT, -- 0 assignment, 1 project,  2 exam
+dateDone DATE,
 courseID VARCHAR(255),
 weight INT,
 
@@ -91,7 +93,7 @@ FOREIGN KEY (activityID) REFERENCES activity(ID)
 
 -- STORED PROCEDURES
 
--- Selects
+-- SELECTS
 
 -- Load courses current teacher ----------------------
 
@@ -100,7 +102,7 @@ DROP PROCEDURE IF EXISTS testingDB.getCoursesTaught $$
 CREATE PROCEDURE testingDB.getCoursesTaught( IN userID_in INT UNSIGNED)
 BEGIN
 		SELECT yearDone, courseID, courseName FROM course, teacherCourse
-    WHERE teacherID = userID_in;
+    WHERE teacherID = userID_in AND closed = 0;
 END $$
 DELIMITER ;
 
@@ -122,9 +124,10 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS testingDB.getActivitiesStudentCourse $$
 CREATE PROCEDURE testingDB.getActivitiesStudentCourse (IN userID_in INT UNSIGNED, IN courseID_in INT UNSIGNED)
 BEGIN
-	SELECT activityID, activityName, activityType FROM activity, activityStudent
+	SELECT activityID, activityName, activityType, grade, weight FROM activity, activityStudent
 	WHERE studentID = userID_in AND courseID = courseID_in
-	ORDER BY activityType;
+	GROUP BY activityType
+	ORDER BY dateDone;
 END $$
 
 DELIMITER ;
@@ -140,7 +143,7 @@ BEGIN
 END $$
 DELIMITER ;
 
--- Load courses current student ---------------------
+-- Load courses current student ----------------------
 
 DELIMITER $$
 DROP PROCEDURE IF EXISTS testingDB.getCoursesStudent $$
@@ -150,8 +153,21 @@ BEGIN
 END $$
 DELIMITER ;
 
--- Inserts
+-- INSERTS
+
+-- Admin ----------
 
 -- New teacher
 
 -- New student
+
+-- New course
+
+-- Teacher --------
+
+-- New activity
+
+-- Update grade
+
+
+
