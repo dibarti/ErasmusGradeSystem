@@ -111,7 +111,7 @@ DROP PROCEDURE IF EXISTS testingDB.getCoursesTaught $$
 CREATE PROCEDURE testingDB.getCoursesTaught( IN userID_in INT UNSIGNED)
 BEGIN
 		SELECT yearDone, courseID, courseName FROM course, teacherCourse
-    WHERE teacherID = userID_in AND closed = 0 ORDER BY yearDone DESC;
+    WHERE teacherID = userID_in AND courseID=ID AND closed = 0 ORDER BY yearDone DESC;
 END $$
 DELIMITER ;
 
@@ -121,8 +121,8 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS testingDB.getStudentsCourse $$
 CREATE PROCEDURE testingDB.getStudentsCourse( IN courseID_in INT UNSIGNED)
 BEGIN
-		SELECT studentID, studentName, studentSurname FROM studentCourse, student
-    WHERE courseID = courseID_in AND student.ID = studentID;
+		SELECT studentID, name, surname FROM studentCourse, student, user
+    WHERE courseID = courseID_in AND student.ID = studentID AND studentID=iduser;
 END $$
 DELIMITER ;
 
@@ -135,7 +135,7 @@ CREATE PROCEDURE testingDB.getActivitiesStudentCourse (IN userID_in INT UNSIGNED
 BEGIN
 	SELECT activityID, activityName, activityType, grade, weight FROM activity, activityStudent
 	WHERE studentID = userID_in AND courseID = courseID_in
-	GROUP BY activityType
+	-- GROUP BY activityType
 	ORDER BY dateDone;
 END $$
 
@@ -147,7 +147,7 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS testingDB.getActivitiesCourse $$
 CREATE PROCEDURE testingDB.getActivitiesCourse( IN courseID_in INT UNSIGNED)
 BEGIN
-		SELECT activityID, activityName, activityType FROM activity
+		SELECT ID, activityName, activityType FROM activity
 		WHERE courseID = courseID_in
     ORDER BY activityType;
 END $$
@@ -160,7 +160,7 @@ DROP PROCEDURE IF EXISTS testingDB.getCoursesStudent $$
 CREATE PROCEDURE testingDB.getCoursesStudent( IN userID_in INT UNSIGNED)
 BEGIN
 		SELECT courseID, courseName, yearDone FROM course, studentCourse
-		WHERE studentID = userID_in ORDER BY yearDone DESC;
+		WHERE studentID = userID_in AND courseID = ID ORDER BY yearDone DESC;
 END $$
 DELIMITER ;
 
