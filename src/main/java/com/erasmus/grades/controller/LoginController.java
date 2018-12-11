@@ -16,11 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class LoginController {
 
-    @RequestMapping(value = "/teacher", method = RequestMethod.GET)
-    public String adminPage(ModelMap model) {
-        model.addAttribute("user", getPrincipal());
-        return "teacher";
-    }
+//    @RequestMapping(value = "/teacher", method = RequestMethod.GET)
+//    public String adminPage(ModelMap model) {
+//        model.addAttribute("user", getPrincipal());
+//        return "teacher";
+//    }
 
     @RequestMapping(value = "/db", method = RequestMethod.GET)
     public String dbaPage(ModelMap model) {

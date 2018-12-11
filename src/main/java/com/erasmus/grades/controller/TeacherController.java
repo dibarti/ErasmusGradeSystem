@@ -1,6 +1,7 @@
 package com.erasmus.grades.controller;
 
 import com.erasmus.grades.model.Course;
+import com.erasmus.grades.model.SecurityUser;
 import com.erasmus.grades.model.StudentGrade;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,34 +20,28 @@ import java.util.List;
 @Controller
 public class TeacherController {
 
-//    @RequestMapping(value = "/teacher", method = RequestMethod.GET)
-//    public String index(ModelMap model) {
-//        model.addAttribute("user", getPrincipal());
-//
-//        // Fetch courses by teacher
-//
-//        return "courses";
-//    }
-//
-//    @RequestMapping(value = "/teacher/course/{id}", method = RequestMethod.GET)
-//    public String indexWithFormat(@PathVariable("id") String courseId, ModelMap model) {
-//        model.addAttribute("user", getPrincipal());
-//
-//        // TODO: Fetch students by course id -> Returns studentname, grade
-//
-//        return "course";
-//    }
+    @RequestMapping(value = "/teacher", method = RequestMethod.GET)
+    public String index(ModelMap model) {
+        model.addAttribute("user", getUser().getUsername());
 
-    private String getPrincipal() {
-        String userName = null;
+        // Fetch courses by teacher
+
+        return "courses";
+    }
+
+    @RequestMapping(value = "/teacher/course/{id}", method = RequestMethod.GET)
+    public String indexWithFormat(@PathVariable("id") String courseId, ModelMap model) {
+        model.addAttribute("user", getUser().getUsername());
+
+        // TODO: Fetch students by course id -> Returns studentname, grade
+
+        return "course";
+    }
+
+    private SecurityUser getUser() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-        if (principal instanceof UserDetails) {
-            userName = ((UserDetails) principal).getUsername();
-        } else {
-            userName = principal.toString();
-        }
-        return userName;
+        return ((SecurityUser) principal);
     }
 
 }

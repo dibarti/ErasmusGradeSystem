@@ -11,14 +11,17 @@ public class DBTeacherDAO extends MySQLConnector{
     private PreparedStatement getStudentsCourseStmt;
     private PreparedStatement updateGradeStmt;
 
+    public DBTeacherDAO() {
+    }
+
     public DBTeacherDAO(String ip, String usr, String pass, String db, int port) throws SQLException {
 
         super.connection(ip, usr, pass, db, port);
         try {
 
-            getCoursesTaughtStmt = con.prepareCall("CALL testingDB.getCoursesTaught(?)");
-            getStudentsCourseStmt = con.prepareCall("CALL testingDB.getStudentsCourse(?)");
-            updateGradeStmt = con.prepareCall("CALL testingDB.updateGrade(?, ?, ?)");
+            getCoursesTaughtStmt = con.prepareCall("CALL testing.getCoursesTaught(?)");
+            getStudentsCourseStmt = con.prepareCall("CALL testing.getStudentsCourse(?)");
+            updateGradeStmt = con.prepareCall("CALL testing.updateGrade(?, ?, ?)");
 
         } catch (SQLException e) {
             System.err.println(e.getMessage());
@@ -29,9 +32,11 @@ public class DBTeacherDAO extends MySQLConnector{
     public ResultSet getCoursesTaught(int userID) {
         ResultSet resultSet = null;
         try {
+            con = getConnection(connectionModel);
+            getCoursesTaughtStmt = con.prepareCall("CALL testing.getCoursesTaught(?)");
             getCoursesTaughtStmt.setInt(1, userID);
             resultSet = getCoursesTaughtStmt.executeQuery();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return resultSet;

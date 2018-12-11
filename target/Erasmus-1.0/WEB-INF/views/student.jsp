@@ -73,7 +73,9 @@
         <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Exam</th>
+            <th scope="col">Activity</th>
+            <th scope="col">Type</th>
+            <th scope="col">Weight</th>
             <th scope="col">Date</th>
             <th scope="col">Grade</th>
         </tr>
@@ -82,7 +84,9 @@
         <c:forEach items="${grades}" var="grade" varStatus="counter">
             <tr>
                 <th scope="row">${counter.count}</th>
-                <td>${grade.course}</td>
+                <td>${grade.activityName}</td>
+                <td>${grade.activityType}</td>
+                <td align="center">${grade.weight}</td>
                 <td align="center">${grade.date}</td>
                 <td align="center">${grade.grade}</td>
             </tr>

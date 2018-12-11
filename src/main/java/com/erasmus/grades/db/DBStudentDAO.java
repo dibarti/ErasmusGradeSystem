@@ -5,32 +5,36 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class DBStudentDAO extends MySQLConnector{
+public class DBStudentDAO extends MySQLConnector {
 
     private PreparedStatement getActivitiesStudentCourseStmt;
     private PreparedStatement getCoursesStudentStmt;
 
-    public DBStudentDAO(String ip, String usr, String pass, String db, int port) throws SQLException {
-
-        super.connection(ip, usr, pass, db, port);
-        try {
-
-            getActivitiesStudentCourseStmt = con.prepareCall("CALL testingDB.getActivitiesStudentCourse(?, ?)");
-            getCoursesStudentStmt = con.prepareCall("CALL testingDB.getCoursesStudent(?)");
-
-        } catch (SQLException e) {
-            System.err.println(e.getMessage());
-        }
-
+    public DBStudentDAO() {
     }
 
-    public ResultSet getActivitiesStudentCourse(int userID, int courseID) {
+//    public DBStudentDAO(String ip, String usr, String pass, String db, int port) throws SQLException {
+//
+//        super.connection(ip, usr, pass, db, port);
+//        try {
+//
+//            getActivitiesStudentCourseStmt = con.prepareCall("CALL testing.getActivitiesStudentCourse(?, ?)");
+//            getCoursesStudentStmt = con.prepareCall("CALL testing.getCoursesStudent(?)");
+//
+//        } catch (SQLException e) {
+//            System.err.println(e.getMessage());
+//        }
+//
+//    }
+
+    public ResultSet getActivitiesStudent(int userID) {
         ResultSet resultSet = null;
         try {
+            con = getConnection(connectionModel);
+            getActivitiesStudentCourseStmt = con.prepareCall("CALL testing.getActivitiesStudentCourse(?)");
             getActivitiesStudentCourseStmt.setInt(1, userID);
-            getActivitiesStudentCourseStmt.setInt(2, courseID);
             resultSet = getActivitiesStudentCourseStmt.executeQuery();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return resultSet;
