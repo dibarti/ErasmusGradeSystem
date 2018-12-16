@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class DBTeacherDAO extends MySQLConnector{
+public class DBTeacherDAO extends MySQLConnector {
 
     private PreparedStatement getCoursesTaughtStmt;
     private PreparedStatement getStudentsCourseStmt;
@@ -42,6 +42,32 @@ public class DBTeacherDAO extends MySQLConnector{
         return resultSet;
     }
 
+    public ResultSet getCourseActivities(int courseId) {
+        ResultSet resultSet = null;
+        try {
+            con = getConnection(connectionModel);
+            getCoursesTaughtStmt = con.prepareCall("CALL testing.getActivitiesCourse(?)");
+            getCoursesTaughtStmt.setInt(1, courseId);
+            resultSet = getCoursesTaughtStmt.executeQuery();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    public ResultSet getStudentsByActivityId(int activityId) {
+        ResultSet resultSet = null;
+        try {
+            con = getConnection(connectionModel);
+            getCoursesTaughtStmt = con.prepareCall("CALL testing.getActivityStudents(?)");
+            getCoursesTaughtStmt.setInt(1, activityId);
+            resultSet = getCoursesTaughtStmt.executeQuery();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
+
 
     public ResultSet getStudentsCourse(int id) {
         ResultSet resultSet = null;
@@ -54,17 +80,22 @@ public class DBTeacherDAO extends MySQLConnector{
         return resultSet;
     }
 
-    public ResultSet updateGrade(int studentID, int activityID, int grade) {
-        ResultSet resultSet = null;
+    public int updateGrade(int studentID, int activityID, int grade) {
+//        ResultSet resultSet = null;
         try {
+            con = getConnection(connectionModel);
+            updateGradeStmt = con.prepareCall("CALL testing.updateGrade(?, ?, ?)");
             updateGradeStmt.setInt(1, activityID);
             updateGradeStmt.setInt(2, studentID);
             updateGradeStmt.setInt(3, grade);
-            resultSet = updateGradeStmt.executeQuery();
-        } catch (SQLException e) {
+            return updateGradeStmt.executeUpdate();
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
+        } finally {
+            closeResources(con);
         }
-        return resultSet;
+        return 0;
+//        return resultSet;
     }
 
 }

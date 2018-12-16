@@ -39,16 +39,14 @@
 			<th scope="col">#</th>
 			<th scope="col">Course</th>
 			<th scope="col">Year</th>
-			<th scope="col">Go</th>
 		</tr>
 		</thead>
 		<tbody>
 		<c:forEach items="${courses}" var="course" varStatus="counter">
 			<tr>
 				<th scope="row">${counter.count}</th>
-				<td>${course.courseName}</td>
-				<td>${course.yearDone}</td>
-				<td align="center"><a href="/teacher/course/${$course.courseId}">--></a></td>
+				<td><a href="/teacher/course/${course.courseId}">${course.courseName}</a></td>
+				<td align="center">${course.yearDone}</td>
 			</tr>
 		</c:forEach>
 		</tbody>

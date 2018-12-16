@@ -37,16 +37,16 @@
 		<thead class="thead-dark">
 		<tr>
 			<th scope="col">#</th>
-			<th scope="col">Course</th>
-			<th scope="col">Year</th>
+			<th scope="col">Activity</th>
+			<th scope="col">Type</th>
 		</tr>
 		</thead>
 		<tbody>
-		<c:forEach items="${courses}" var="course" varStatus="counter">
+		<c:forEach items="${activities}" var="activity" varStatus="counter">
 			<tr>
 				<th scope="row">${counter.count}</th>
-				<td><a href="/teacher/course/${course.courseId}">${course.courseName}</a></td>
-				<td align="center">${course.yearDone}</td>
+				<td><a href="/teacher/course/${courseId}/activity/${activity.activityId}">${activity.activityName}</a></td>
+				<td>${activity.activityType}</td>
 			</tr>
 		</c:forEach>
 		</tbody>

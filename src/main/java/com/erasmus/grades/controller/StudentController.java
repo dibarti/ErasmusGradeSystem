@@ -14,33 +14,7 @@ import java.util.List;
 
 @Controller
 public class StudentController {
-
-//    private List<StudentGrade> getGrades(String format) {
-//        String grade1;
-//        String grade2;
-//        String grade3;
-//        if (format.equals("danish")) {
-//            grade1 = "10";
-//            grade2 = "12";
-//            grade3 = "7";
-//        } else {
-//            grade1 = "B";
-//            grade2 = "A";
-//            grade3 = "C";
-//        }
-//
-//        Course testing = new Course("Testing", 10);
-//        Course databases = new Course("Databases", 10);
-//        Course ai = new Course("Artificial intelligence", 10);
-//        Calendar c = Calendar.getInstance();
-//        List<StudentGrade> grades = new ArrayList<>();
-//        grades.add(new StudentGrade("Testing",grade1));
-//        grades.add(new StudentGrade("Databases",  grade2));
-//        grades.add(new StudentGrade("Artificial intelligence", grade3));
-//
-//        return grades;
-//    }
-
+ 
     @RequestMapping(value = "/student", method = RequestMethod.GET)
     public String index(ModelMap model) {
         String format = "danish";

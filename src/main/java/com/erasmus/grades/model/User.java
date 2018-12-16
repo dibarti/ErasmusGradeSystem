@@ -10,7 +10,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "iduser", unique = true, nullable = false)
-    private long iduser;
+    protected long iduser;
     @Column(name = "username", unique = true, nullable = false)
     private String username;
     @Column(name = "password", nullable = false)
@@ -18,11 +18,14 @@ public class User implements Serializable {
     @Column(name = "role", nullable = false)
     private int role;
     @Column(name = "name")
-    private String name;
+    protected String name;
     @Column(name = "surname")
-    private String surname;
+    protected String surname;
     @Column(name = "email")
-    private String email;
+    protected String email;
+
+    public User() {
+    }
 
     public long getUserId() {
         return iduser;
@@ -51,27 +54,6 @@ public class User implements Serializable {
     public String getEmail() {
         return email;
     }
-
-    //    public void addCourse(Course course) {
-//        UserToCourse userToCourse = new UserToCourse(this, course);
-//        courses.add(userToCourse);
-//        course.getUsers().add(userToCourse);
-//    }
-//
-//    public void removeCourse(Course course) {
-//        for (Iterator<UserToCourse> iterator = courses.iterator();
-//             iterator.hasNext(); ) {
-//            UserToCourse userToCourse = iterator.next();
-//
-//            if (userToCourse.getCourse().equals(this) &&
-//                    userToCourse.getCourse().equals(course)) {
-//                iterator.remove();
-//                userToCourse.getCourse().getUsers().remove(userToCourse);
-//                userToCourse.setUser(null);
-//                userToCourse.setCourse(null);
-//            }
-//        }
-//    }
 
     public void setUserId(long iduser) {
         this.iduser = iduser;
