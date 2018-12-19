@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class TestDBConn {
 
     public static void main(String[] args) {
-        MySQLConnectionModel connectionModel = new MySQLConnectionModel("root", "test", "localhost",3306,"erasmus");
+        MySQLConnectionModel connectionModel = new MySQLConnectionModel("root", "test", "localhost",3306,"testing");
         Connection conn = null;
         try
         {
@@ -16,12 +16,9 @@ public class TestDBConn {
                 System.out.println("Connection success!");
             }
         }
-        catch (SQLException e) {
+        catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        finally {
+        } finally {
             MySQLConnector.closeResources(conn);
         }
 

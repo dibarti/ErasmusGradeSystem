@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="1ec1b500-7eba-4bbe-8ef8-8ec23462016b">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-/Users/dylanbarteling/SCHOOL/JAAR4/Testing/Project/stackoverflow/Erasmus/src/main/resources/hibernate.cfg.xml</remarks>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/erasmus</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="yearIsDateType" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="tinyInt1isBit" value="false" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="application" uuid="e84c25cc-1e72-4975-ba42-dafd70d1fd18">
+    <data-source source="LOCAL" name="application" uuid="8aeaaf3f-a1a3-4d65-9d6e-9993cc8ab868">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
@@ -27,7 +9,7 @@
 
 /Users/dylanbarteling/SCHOOL/JAAR4/Testing/Project/stackoverflow/Erasmus/src/main/resources/application.properties</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/erasmus</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/testing</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="yearIsDateType" value="false" />

@@ -1,43 +1,45 @@
 package com.erasmus.grades.model;
 
 
+import org.apache.commons.lang.StringUtils;
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class StudentGrade implements Serializable {
-//    private Course course;
-    private String course;
-    private Date date;
+    private String activityName;
+    private String activityType;
     private String grade;
+    private int weight;
+    private Date date;
 
-//    public StudentGrade(Course course, Date date, String grade) {
-//        this.course = course;
-//        this.date = date;
-//        this.grade = grade;
-//    }
-//
-//    public Course getCourse() {
-//        return course;
-//    }
-
-
-    public StudentGrade(String course, String grade) {
-        this.course = course;
-        this.date = new Date();
+    public StudentGrade(String activityName, String activityType, String grade, int weight, Date date) {
+        this.activityName = activityName;
+        this.activityType = activityType;
         this.grade = grade;
+        this.weight = weight;
+        this.date = date;
     }
 
-    public String getCourse() {
-        return course;
+    public String getActivityName() {
+        return activityName;
+    }
+
+    public String getActivityType() {
+        return StringUtils.capitalize(activityType);
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public int getWeight() {
+        return weight;
     }
 
     public String getDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         return sdf.format(date);
-    }
-
-    public String getGrade() {
-        return grade;
     }
 }

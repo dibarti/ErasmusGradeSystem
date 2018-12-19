@@ -2,27 +2,30 @@ package com.erasmus.grades.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.*;
-
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "user")
 public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "iduser", unique = true, nullable = false)
-    private long iduser;
+    protected long iduser;
     @Column(name = "username", unique = true, nullable = false)
     private String username;
     @Column(name = "password", nullable = false)
     private String password;
     @Column(name = "role", nullable = false)
     private int role;
+    @Column(name = "name")
+    protected String name;
+    @Column(name = "surname")
+    protected String surname;
+    @Column(name = "email")
+    protected String email;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.user", cascade=CascadeType.ALL)
-    private Set<UserToCourse> userToCourses = new HashSet<>(0);
+    public User() {
+    }
 
     public long getUserId() {
         return iduser;
@@ -40,34 +43,17 @@ public class User implements Serializable {
         return UserProfileType.values()[role - 1];
     }
 
-    public Set<UserToCourse> getUserToCourses() {
-        return this.userToCourses;
+    public String getName() {
+        return name;
     }
 
-    public void setUserToCourses(Set<UserToCourse> userToCourses) {
-        this.userToCourses = userToCourses;
+    public String getSurname() {
+        return surname;
     }
 
-//    public void addCourse(Course course) {
-//        UserToCourse userToCourse = new UserToCourse(this, course);
-//        courses.add(userToCourse);
-//        course.getUsers().add(userToCourse);
-//    }
-//
-//    public void removeCourse(Course course) {
-//        for (Iterator<UserToCourse> iterator = courses.iterator();
-//             iterator.hasNext(); ) {
-//            UserToCourse userToCourse = iterator.next();
-//
-//            if (userToCourse.getCourse().equals(this) &&
-//                    userToCourse.getCourse().equals(course)) {
-//                iterator.remove();
-//                userToCourse.getCourse().getUsers().remove(userToCourse);
-//                userToCourse.setUser(null);
-//                userToCourse.setCourse(null);
-//            }
-//        }
-//    }
+    public String getEmail() {
+        return email;
+    }
 
     public void setUserId(long iduser) {
         this.iduser = iduser;
