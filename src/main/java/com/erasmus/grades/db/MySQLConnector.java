@@ -8,8 +8,8 @@ public class MySQLConnector {
 
     private final static String url = "jdbc:mysql://";
 
-    Connection con;
-    MySQLConnectionModel connectionModel = new MySQLConnectionModel("root", "test", "localhost", 3306, "testing");
+    protected Connection con;
+    protected MySQLConnectionModel connectionModel = new MySQLConnectionModel("root", "test", "localhost", 3306, "testing");
 
     public static Connection getConnection(MySQLConnectionModel connModel) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");

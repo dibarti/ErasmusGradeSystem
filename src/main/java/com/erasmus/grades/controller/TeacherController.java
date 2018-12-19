@@ -1,18 +1,12 @@
 package com.erasmus.grades.controller;
 
-import com.erasmus.grades.db.DBTeacherDAO;
 import com.erasmus.grades.model.*;
 import com.erasmus.grades.service.TeacherService;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 @Controller

@@ -1,6 +1,6 @@
 package com.erasmus.grades.service;
 
-import com.erasmus.grades.db.DBStudentDAO;
+import com.erasmus.grades.dao.DBStudentDAO;
 import com.erasmus.grades.db.MySQLConnector;
 import com.erasmus.grades.model.StudentGrade;
 import com.erasmus.grades.util.ConvertGrade;

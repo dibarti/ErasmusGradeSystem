@@ -1,4 +1,6 @@
-package com.erasmus.grades.db;
+package com.erasmus.grades.dao;
+
+import com.erasmus.grades.db.MySQLConnector;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

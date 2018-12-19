@@ -1,13 +1,12 @@
 package com.erasmus.grades.service;
 
-import com.erasmus.grades.db.DBTeacherDAO;
+import com.erasmus.grades.dao.DBTeacherDAO;
 import com.erasmus.grades.db.MySQLConnector;
 import com.erasmus.grades.model.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class TeacherService {
