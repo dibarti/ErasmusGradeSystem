@@ -2,6 +2,20 @@
 
 In this web application are students able to see their grades. The students have an option to view their grades in the ECTS format.
 
+## Database
+
+The database has to be imported to be able to use the web app.
+Use [DBexportV3.sql](DBexport/exportV3.sql) to import the database
+
+## Stress test dashboard
+
+Open index.html in the [dashboard](dashboard) folder to view the results of the Stress test
+
+## Documents
+
+* [Risk Table](RiskTable.pdf)
+* [Guerilla Test Presentation](GuerillaTest.pdf)
+
 ## Techniques used
 
 * Java
@@ -9,6 +23,7 @@ In this web application are students able to see their grades. The students have
 * Hibernate
 * JUnit
 * Travis
+* JMeter
 
 ## Checklist
 
