@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 public class StudentController {
- 
+
     @RequestMapping(value = "/student", method = RequestMethod.GET)
     public String index(ModelMap model) {
         String format = "danish";

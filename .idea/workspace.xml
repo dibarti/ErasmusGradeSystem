@@ -7,22 +7,139 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4de5a279-005f-46fb-850d-03e38c4fffe2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/062af5c5-2f6a-4aaf-ae92-7bf5b0b3b143.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1ec1b500-7eba-4bbe-8ef8-8ec23462016b.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e84c25cc-1e72-4975-ba42-dafd70d1fd18.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/README.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/css/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/css/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/css/legends.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/css/theme.blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/curvedLines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/customGraph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/dashboard-commons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/graph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/hashtable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/jquery.flot.stack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/jquery.numberformatter-1.2.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/js/jquery.tablesorter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/pages/CustomsGraphs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/pages/OverTime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/pages/ResponseTimes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/pages/Throughput.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/content/pages/icon-apache.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/bootstrap/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/bootstrap/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot-axislabels/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot-axislabels/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot-axislabels/jquery.flot.axislabels.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot.tooltip/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot.tooltip/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot.tooltip/js/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot.tooltip/js/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot.tooltip/js/jquery.flot.tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot.tooltip/js/jquery.flot.tooltip.source.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/API.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/FAQ.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/NEWS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/PLUGINS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/excanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/flot.jquery.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.colorhelpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.crosshair.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.errorbars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.fillbetween.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.navigate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.resize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.selection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.stack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.symbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.threshold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.flot.time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/extras.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/spinning.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_extras.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_spinning.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/font-awesome/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/jquery/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/jquery/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/jquery/dist/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/jquery/dist/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/jquery/dist/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/metisMenu/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/metisMenu/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/metisMenu/dist/metisMenu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/metisMenu/dist/metisMenu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/dist/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/dist/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/dist/css/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/dist/css/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/dist/css/legends.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/dist/css/sb-admin-2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/dist/js/sb-admin-2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/less/sb-admin-2.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/less/variables.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/teacher.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/db/DBTeacherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/db/DBTeacherDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erasmus/grades/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Erasmus-1.0/WEB-INF/views/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Erasmus-1.0/WEB-INF/views/teacher.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erasmus/grades/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erasmus/grades/model/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erasmus/grades/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erasmus/grades/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erasmus/grades/service/HibernateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erasmus/grades/service/HibernateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DBexport/DB.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,7 +237,7 @@
     <session id="-913975021">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="4" />
@@ -337,6 +454,11 @@
       </expand>
       <select />
     </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/dashboard/sbadmin2-1.0.7/bower_components/flot/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
@@ -672,12 +794,12 @@
       <workItem from="1544527732504" duration="16600000" />
       <workItem from="1544613168734" duration="19929000" />
       <workItem from="1544792954071" duration="657000" />
-      <workItem from="1544877984775" duration="740000" />
+      <workItem from="1544877984775" duration="742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123585000" />
+    <option name="totallyTimeSpent" value="123587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -692,7 +814,7 @@
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32831737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49785408" visible="true" weight="0.30963856" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" weight="0.30963856" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39808482" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
