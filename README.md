@@ -2,6 +2,15 @@
 
 In this web application are students able to see their grades. The students have an option to view their grades in the ECTS format.
 
+## Techniques used
+
+* Java
+* Spring MVC
+* Hibernate
+* JUnit
+* Travis
+* JMeter
+
 ## Database
 
 The database has to be imported to be able to use the web app.
@@ -11,19 +20,20 @@ Use [DBexportV3.sql](DBexport/exportV3.sql) to import the database
 
 Open index.html in the [dashboard](dashboard) folder to view the results of the Stress test
 
+![Stress Test](Documents/StressTestResult.png "Stress Test")
+
 ## Documents
 
-* [Risk Table](RiskTable.pdf)
-* [Guerilla Test Presentation](GuerillaTest.pdf)
+* [Risk Table](Documents/RiskTable.pdf)
+* [Guerilla Test Presentation](Documents/GuerillaTest.pdf)
+* [Specifications](Documents/Specification%26TestCases/Specifications.pdf)
+* [Test Cases](Documents/Specification%26TestCases/Test%20cases.xlsx)
 
-## Techniques used
+## Travis CI
+![Travis CI](Documents/TravisCI_Result.png "Travis CI")
 
-* Java
-* Spring MVC
-* Hibernate
-* JUnit
-* Travis
-* JMeter
+## Selenium Tests
+![Selenium Tests Result](Documents/SeleniumTests/SeleniumTestResult.png "Selenium Tests Result")
 
 ## Checklist
 
